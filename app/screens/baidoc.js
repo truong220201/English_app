@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import { CheckBox, Icon } from 'react-native-elements';
 import { Animated, TouchableOpacity, TouchableHighlight, ScrollView, Text, View, Button, StyleSheet, Image, ImageBackground, ActivityIndicator, Easing, Dimensions } from 'react-native';
-// import {
-//   AdMobBanner,
-//   AdMobInterstitial,
-//   PublisherBanner,
-//   AdMobRewarded,
-// } from 'expo-ads-admob'
 
 import SwipeUpDown from 'react-native-swipe-up-down';
 import CountDown from 'react-native-countdown-component';
@@ -14,7 +8,7 @@ import { RadioButtons, SegmentedControls } from 'react-native-radio-buttons';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 
-class testTimer extends React.Component {
+class BaiDoc extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -379,4 +373,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default testTimer;
+export default BaiDoc;

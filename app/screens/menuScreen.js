@@ -59,7 +59,7 @@ export default class layerMenu extends React.Component{
                 </Animatable.Text>
                 <Animatable.Text animation={tsp} style={{width: windowWidth,}} >
                     <View style={{width:windowWidth}}>
-                        <TouchableOpacity onPress={()=>{navigation.navigate('huongdan',{id:id,ten:ten,uid:this.uid,email:this.email,socau:10,tg:10})}} style={styles.btnInfo}>
+                        <TouchableOpacity onPress={()=>{navigation.navigate('huongdan',{id:id,ten:ten,uid:this.uid,email:this.email,socau:10,tg:10,loaibai:'testngan'})}} style={styles.btnInfo}>
                             <View style={{height:'100%',flex:1,justifyContent:'center'}}>
                                 <Icon color={'#6dde9e'} size={35} name='auto-awesome'/>
                             </View>

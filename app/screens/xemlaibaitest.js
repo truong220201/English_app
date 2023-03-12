@@ -4,12 +4,12 @@ import { Icon } from 'react-native-elements';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RadioButtons,SegmentedControls } from 'react-native-radio-buttons';
 import HTMLView from 'react-native-htmlview';
-import {
-    AdMobBanner,
-    AdMobInterstitial,
-    PublisherBanner,
-    AdMobRewarded,
-  } from 'expo-ads-admob'
+// import {
+//     AdMobBanner,
+//     AdMobInterstitial,
+//     PublisherBanner,
+//     AdMobRewarded,
+//   } from 'expo-ads-admob'
 
 const Stack = createNativeStackNavigator();
 
@@ -239,9 +239,9 @@ export default class xemlai extends React.Component{
     //quang cao
     async componentDidMount(){
         this.listenForItems(1);
-        AdMobInterstitial.setAdUnitID("ca-app-pub-3940256099942544/1033173712" );
-        await AdMobInterstitial.requestAdAsync({servePersonalizedAds: false});
-        await AdMobInterstitial.showAdAsync();
+        // AdMobInterstitial.setAdUnitID("ca-app-pub-3940256099942544/1033173712" );
+        // await AdMobInterstitial.requestAdAsync({servePersonalizedAds: false});
+        // await AdMobInterstitial.showAdAsync();
     }
 
   render(){

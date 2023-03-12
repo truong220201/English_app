@@ -7,12 +7,12 @@ import { doc, setDoc } from "firebase/firestore";
 import { collection, getDocs } from "firebase/firestore";
 import { firebaseApp } from '../../components/firebaseConfig';
 import { getFirestore } from "firebase/firestore";
-import {
-    AdMobBanner,
-    AdMobInterstitial,
-    PublisherBanner,
-    AdMobRewarded,
-} from 'expo-ads-admob'
+// import {
+//     AdMobBanner,
+//     AdMobInterstitial,
+//     PublisherBanner,
+//     AdMobRewarded,
+// } from 'expo-ads-admob'
 
 import * as Animatable from 'react-native-animatable';
 // //import Exam from './model/exam';
@@ -35,7 +35,7 @@ export default class huongdan extends React.Component {
         //console.log(this.itemRef);
         const { route, navigation } = this.props;
         this.nvt = navigation;
-        const { baitap, name, n, ten, uid, email, socau, tg } = route.params;
+        const { baitap, name, n, ten, uid, email, socau, tg,loaibai } = route.params;
         const { loaiId, id } = route.params;
         console.log('baitap:', socau);
         //console.log('uid form test:',uid)
@@ -326,11 +326,11 @@ export default class huongdan extends React.Component {
                         </View>
                     </View>
 
-                    <AdMobBanner
+                    {/* <AdMobBanner
                         bannerSize="fullBanner"
                         adUnitID="ca-app-pub-6851800445634158/6549335557" // Test ID, Replace with your-admob-unit-id
                         servePersonalizedAds={false}
-                    />
+                    /> */}
                 </View>
 
                 <View style={styles.vw4}>
@@ -344,7 +344,9 @@ export default class huongdan extends React.Component {
                         marginBottom: '6%',
                         elevation: 1,
                     }} >
-                        <TouchableOpacity onPress={() => navigation.navigate('testScreen', { baitap: id, n: 1, ten: ten, uid: uid, email: email, itemK: this.state.itemK, nameqs: this.state.nameqs, item: this.state.item, opt0: this.state.opt0, opt1: this.state.opt1, opt2: this.state.opt2, opt3: this.state.opt3, trueAns: this.state.trueAns, socau: this.state.socau, tg: this.state.tg, idOpt: this.state.idOpt })} style={{ alignItems: 'center', }}>
+                        <TouchableOpacity onPress={() => {if(loaibai=='testngan'){
+                            navigation.navigate('testScreen', { baitap: id, n: 1, ten: ten, uid: uid, email: email, itemK: this.state.itemK, nameqs: this.state.nameqs, item: this.state.item, opt0: this.state.opt0, opt1: this.state.opt1, opt2: this.state.opt2, opt3: this.state.opt3, trueAns: this.state.trueAns, socau: this.state.socau, tg: this.state.tg, idOpt: this.state.idOpt })
+                        }else if(loaibai=='doc'){navigation.navigate('baidoc',)}}} style={{ alignItems: 'center', }}>
                             <View style={{ height: '100%', justifyContent: 'center' }}>
                                 <Text style={{ fontSize: 20, color: '#fff' }}>Làm bài</Text>
                             </View>

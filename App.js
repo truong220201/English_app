@@ -41,8 +41,8 @@ import speechadde from './app/screens/speechadde';
 import sound from './app/screens/sound';
 import learnspeech from './app/screens/learnspeech';
 import speechword from './app/screens/speechword';
-import loaibaitap from './app/screens/loaibaitap'
 import LoaiBaiTap from './app/screens/loaibaitap';
+import BaiDoc from './app/screens/baidoc';
 const Stack = createNativeStackNavigator();
 //set màu cho screen
 const navTheme = {
@@ -60,6 +60,7 @@ export default class App extends React.Component {
         <Stack.Navigator  initialRouteName="front" screenOptions={{headerShown: true}}>
           <Stack.Screen name = "front" component = {front} options={{headerShown: false}} />
           <Stack.Screen name = "chontrinhdo" component = {chontrinhdo} options={{title:''}} />
+          <Stack.Screen name = "baidoc" component = {BaiDoc} options={{title:''}} />
           <Stack.Screen name = "lbt" component = {LoaiBaiTap} options={{headerShown: false}} />
           <Stack.Screen name = "home" component = {Home} options={{headerShown: false}} />
           <Stack.Screen name = "menuScreen" component = {menuScreen}  options={{title:'',headerTransparent:true,headerShadowVisible:false,headerTintColor:'white'}}  />

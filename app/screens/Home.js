@@ -15,7 +15,7 @@ export default class Home extends React.Component{
         //console.log(this.itemRef);
         const { route,navigation } = this.props;
         const { uid,email} = route.params;
-        this.uid=uid;
+        this.uid=uid; 
         this.email=email;
         console.log(uid,email);
         this.state = {

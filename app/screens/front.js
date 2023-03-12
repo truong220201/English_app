@@ -23,7 +23,7 @@ export default class DanhSach extends React.Component{
         <View style={{flex:2,width:'100%',alignItems:'center',justifyContent:'center',justifyContent:'flex-end'}}>
             
            
-            <TouchableHighlight style={styles.btnStart} onPress={()=>navigation.navigate('home',{uid:'0',email:'Anonymous'})} underlayColor="white">
+            <TouchableHighlight style={styles.btnStart} onPress={()=>{navigation.navigate('chontrinhdo');console.log('press')}} underlayColor="white">
                 <View>
                     <Text style={styles.btnTextStart}>BẮT ĐẦU NGAY NÀO</Text>
                 </View> 
